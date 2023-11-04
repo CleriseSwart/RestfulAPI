@@ -1,0 +1,90 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.app {
+  position: relative;
+}
+
+.app::before {
+  content: '';
+  background-image: url("https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg");
+  opacity: 0.15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.car-list {
+  list-style: none;
+  padding: 0;
+}
+
+.car-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.car-item {
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  font-size: 18px;
+}
+
+.car-item:hover {
+  transform: translateY(-2px);
+}
+
+.car-item td {
+  padding: 10px;
+  text-align: center;
+}
+
+.car-item span {
+  font-size: 30px; /* Adjust the value as needed */
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.car-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
