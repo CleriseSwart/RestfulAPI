@@ -1,85 +1,47 @@
-# Car Storage API with Express
-This RESTful API developed with Express enables users to store a list of cars and perform various operations such as adding, deleting, and updating car records.
+# Express API for Car Inventory
 
-## Project Overview
-The API exposes endpoints that handle different CRUD (Create, Read, Update, Delete) operations on a list of cars. It utilizes HTTP methods like GET, POST, DELETE, and PUT to manage the car records.
+This repository contains a simple Express API that allows you to manage a list of cars. You can use Postman to interact with the API and perform various actions, such as adding new cars, updating existing cars, and deleting cars.
 
-### Endpoints and Operations
-- **GET - /api**: Returns an array of car items.
+## Getting Started
 
-    ```
-    GET http://localhost:8080/api
-    ```
+1. Clone this repository to your local machine.
+2. Navigate to the project folder in your terminal.
 
-- **POST - /api**: Adds a new car item to the list.
+## Running the Server
 
-    ```
-    POST http://localhost:8080/api
-    ```
+1. Install the required dependencies by running: npm install
+2. Start the server by running: npm start
+The server will run on port 8080 by default.
 
-    Sample Request Body:
-    ```
-    {
-        "make": "Audi",
-        "model": "Q5",
-        "seats": 5
-    }
-    ```
+## Using Postman
+You can use Postman to interact with the API and test its functionalities.
 
-- **DELETE - /api/:id**: Deletes a car item based on its ID.
+## GET Request
+To retrieve the list of cars, send a GET request to: GET http://localhost:8080/api
 
-    ```
-    DELETE http://localhost:8080/api/:id
-    ```
+## POST Request
+To add a new car, send a POST request to: POST http://localhost:8080/api
 
-- **PUT - /api/:id**: Updates the model or number of seats for a specific car.
+Provide the following JSON data in the request body:
+{
+  "make": "Toyota",
+  "model": "Camry",
+  "seats": 5
+}
 
-    ```
-    PUT http://localhost:8080/api/:id
-    ```
+## DELETE Request
+To delete a car by its ID, send a DELETE request to: DELETE http://localhost:8080/api/:id
+Replace :id with the ID of the car you want to delete.
 
-    Sample Request Body (for updating the model):
-    ```
-    {
-        "model": "New Model"
-    }
-    ```
+## PUT Request
+To update a car's model or seats, send a PUT request to: PUT http://localhost:8080/api/:id
+Replace :id with the ID of the car you want to update. Provide the updated JSON data in the request body, such as:
+{
+  "model": "New Model"
+}
 
-### Usage with Postman
-
-1. **Testing GET Request**:
-    - Launch Postman.
-    - Use the URL: `http://localhost:8080/api`.
-    - Choose the `GET` method.
-    - Send the request and receive an array of car items.
-
-2. **Testing POST Request**:
-    - Launch Postman.
-    - Use the URL: `http://localhost:8080/api`.
-    - Choose the `POST` method.
-    - In the request body, provide car details.
-    - Send the request to add a new car item.
-
-3. **Testing DELETE Request**:
-    - Launch Postman.
-    - Use the URL: `http://localhost:8080/api/:id`.
-    - Replace `:id` with the specific car ID you want to delete.
-    - Choose the `DELETE` method.
-    - Send the request to delete the car item.
-
-4. **Testing PUT Request**:
-    - Launch Postman.
-    - Use the URL: `http://localhost:8080/api/:id`.
-    - Replace `:id` with the specific car ID you want to update.
-    - Choose the `PUT` method.
-    - In the request body, specify the field to update.
-    - Send the request to update the car item.
-
-### Project Structure
-
-The project directory is organized as follows:
-    - /routes: Contains the route handlers for the API endpoints.
-    - /server.js: Main file initializing the Express server and setting up routes.
-
-**Note:** The node_modules directory has been excluded from the submission.
-Feel free to test the API using Postman to perform CRUD operations on car items.
+## Notes
+- Remember to have the server running (npm start) while testing the API with Postman.
+- Make sure to replace placeholders like :id with actual values.
+- Handle possible error scenarios, such as providing incorrect IDs or data formats.
+Enjoy your testing!
